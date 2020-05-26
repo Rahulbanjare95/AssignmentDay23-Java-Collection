@@ -1,20 +1,22 @@
-class EmpWageUsingCollection{
-     	  public static final int IS_FULL_TIME=1;
-        public static final int IS_PART_TIME=2;
-        private final String company;
-        private final int empRatePerHour;
-        private final int numOfWorkingDays;
-        private final int maxHoursPerMonth;
-			private int totalEmpWage;
+class EmpWageUsingCollection {
+			public static final int IS_PART_TIME=1;
+			public static final int IS_FULL_TIME=2;
 
-        public EmpWageUsingCollection(String company,int empRatePerHour,int numOfWorkingDays,int maxHoursPerMonth){
-                this.company =company;
-                this.empRatePerHour=empRatePerHour;
-                this.numOfWorkingDays=numOfWorkingDays;
-                this.maxHoursPerMonth=maxHoursPerMonth;
-                }
+			private int numOfCompany = 0 ;
+			private CompanyWage[] companyWageArray;
 
-        public void computeWage()
+			public EmpWageUsingCollection(){
+				companyWageArray=new companyWageArray[5];
+			}
+			private void addCompanyWage(String company, int empRatePerHour,int numOfWorkingDays,int maxHoursPerMonth) {
+			companyWageArray[numOfCompany] = new 
+CompanyEmpWage(company,empRatePerHour,numOfWorkingDays,maxHoursPerMonth);
+			numOfCompany++;
+			}
+
+
+      
+		  public void computeWage()
         {
         int empHrs=0,totalEmpHrs=0,totalWorkingDays=0;
         int totalWorkingHrs=0;
